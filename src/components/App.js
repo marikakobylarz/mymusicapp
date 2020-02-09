@@ -18,7 +18,7 @@ const Result = styled.div`
   }
 `;
 
-const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
+// const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
 class App extends React.Component {
   state = {
@@ -38,7 +38,7 @@ class App extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const URL = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${this.state.searchTerm}&key=${API_KEY}&limit=5`;
+    const URL = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${this.state.searchTerm}&key=AIzaSyAg3PEzIxZFKKAR_zSUbVnO5o9CAVnHDns&limit=5`;
 
     fetch(URL)
       .then(response => {
